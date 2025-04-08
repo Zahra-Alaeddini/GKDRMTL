@@ -1,30 +1,67 @@
-## GKD2RMTL: A Multi-Task Learning and Knowledge Distillation Framework for Efficient Graph-Based Drug Repurposing  
+<p align="center">
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT">
+  </a>
+  <img src="https://img.shields.io/badge/Python-3.8%2B-orange" alt="Python Version">
+</p>
 
-GKD2RMTL introduces a graph-based teacher-student framework for multi-task learning on a customized Biomedical Knowledge Graph (BKG). The teacher model leverages a multi-layer GraphSAGE architecture with Leaky ReLU activations, dropout regularization, and task-specific output heads. It is designed to predict various biomedical relationships, including:  
-- **Drug-Disease Associations**  
-- **Drug Similarity**  
-- **Drug-Gene Binding Interactions**  
-- **Disease-Gene Associations**
+
+# GKD2RMTL: A Multi-Task Learning and Knowledge Distillation Framework for Efficient Graph-Based Drug Repurposing
+
+**GKD2RMTL** is a graph-based **teacher-student** framework designed for **multi-task learning** on a customized **Biomedical Knowledge Graph (BKG)**. It aims to enhance **drug repurposing** by predicting a variety of biomedical relationships using graph neural networks and knowledge distillation techniques.
+
+## 🧠 Overview
+
+The **teacher model** is a deep, expressive architecture built with:
+- Multi-layer **GraphSAGE**
+- **Leaky ReLU** activations
+- **Dropout regularization**
+- **Task-specific output heads**
+
+It is employed to predict:
+- 🧪 **Drug-Disease Associations**  
+- 🧬 **Drug-Gene Binding Interactions**  
+- 💊 **Drug Similarity**  
+- 🧫 **Disease-Gene Associations**
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e106ff4e-465f-42ec-938f-0c823ad5be02" alt="GKD2RMTL Architecture" width="600"/>
+</p>
+
+The **student model** is lightweight, employing a **single-layer GraphSAGE** with task-specific heads. It learns from the teacher via **knowledge distillation**, using **distillation loss** to transfer knowledge effectively.
+
+## ⚙️ Key Features
+
+✅ Multi-task learning with **task-specific heads**  
+✅ **Graph-based knowledge distillation** for compact student models  
+✅ **Optimized negative sampling** for imbalanced biomedical graphs  
+✅ **Lightweight student architecture** for scalable deployment  
+✅ Joint use of **node features**, **edge attributes**, and **GraphSAGE embeddings**
+
+## 📊 Handling Class Imbalance
+
+To address class imbalance in edge prediction tasks:
+- **Weighted binary cross-entropy loss** is applied
+- **Adaptive negative sampling** improves performance on sparse graphs
+
+## 📝 License
+This project is licensed under the [MIT License](LICENSE).
+
+## 📬 Contact
+For questions, feel free to reach out:
+
+- 👩‍💻 **Zahra Alaeddini**
   
-   ![image](https://github.com/user-attachments/assets/846f3738-7303-4a98-853c-953c97555f8b)
-  
-The student model adopts a lighter structure for efficient deployment, utilizing a single-layer GraphSAGE while retaining task-specific heads to facilitate multi-task predictions. Knowledge distillation plays a key role, where the teacher’s softened logits, obtained through temperature scaling, guide the student model via a distillation loss function, ensuring the effective transfer of task-specific knowledge.  
+📧 alaeddini.zahra@gmail.com
 
-To address class imbalance in edge prediction tasks, the framework incorporates a weighted binary cross-entropy loss alongside optimized negative sampling strategies, enhancing performance on sparse datasets. The pipeline integrates node features, edge connections, edge attributes, and GraphSAGE layers, ensuring predictions are informed by ground-truth data and teacher supervision.  
+## 📦 Prerequisites
 
-## Features  
-✅ Multi-task learning with task-specific heads  
-✅ Graph-based knowledge distillation for efficient student model training  
-✅ Optimized negative sampling for sparse biomedical datasets  
-✅ Lightweight student model for scalable deployment  
-✅ Integration of node features, edge attributes, and GraphSAGE embeddings  
+Make sure you have the following dependencies installed:
 
-## Prerequisites  
-Ensure you have the following dependencies installed:  
-- Python 3.8+  
-- PyTorch    
-- NumPy  
-- Pandas  
-- Scikit-learn  
-
-
+```bash
+Python >= 3.8  
+PyTorch
+PyTorch Geometric 
+NumPy  
+Pandas  
+Scikit-learn
