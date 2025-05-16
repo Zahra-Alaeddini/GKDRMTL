@@ -25,7 +25,7 @@ It is employed to predict:
 - 🧫 **Disease-Gene Associations**
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/e106ff4e-465f-42ec-938f-0c823ad5be02" alt="GKD2RMTL Architecture" width="600"/>
+  <img src="https://github.com/user-attachments/assets/9006f4c5-16f7-4b68-93d4-a885426a48ba" alt="GKD2RMTL Architecture" width="1280" height="720"/>
 </p>
 
 The **student model** is lightweight, employing a **single-layer GraphSAGE** with task-specific heads. It learns from the teacher via **knowledge distillation**, using **distillation loss** to transfer knowledge effectively.
