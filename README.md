@@ -6,9 +6,9 @@
 </p>
 
 
-# GKD2RMTL: A Multi-Task Learning and Knowledge Distillation Framework for Efficient Graph-Based Drug Repurposing
+# GKDRMTL: Graph-based Knowledge Distillation Framework for Drug Repurposing via Multi-task Learning
 
-**GKD2RMTL** is a graph-based **teacher-student** framework designed for **multi-task learning** on a customized **Biomedical Knowledge Graph (BKG)**. It aims to enhance **drug repurposing** by predicting a variety of biomedical relationships using graph neural networks and knowledge distillation techniques.
+**GKDRMTL** is a graph-based framework designed for **multi-task learning** on a customized **Biomedical Knowledge Graph (BKG)**. It aims to enhance **drug repurposing** by predicting a variety of biomedical relationships using graph neural networks and knowledge distillation approaches.
 
 ## 🧠 Overview
 
@@ -19,10 +19,10 @@ The **teacher model** is a deep, expressive architecture built with:
 - **Task-specific output heads**
 
 It is employed to predict:
-- 🧪 **Drug-Disease Associations**  
-- 🧬 **Drug-Gene Binding Interactions**  
-- 💊 **Drug Similarity**  
-- 🧫 **Disease-Gene Associations**
+- 🧪 **drug-disease associations**  
+- 🧬 **drug-gene binding interactions**  
+- 💊 **drug similarity**  
+- 🧫 **disease-gene associations**
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9006f4c5-16f7-4b68-93d4-a885426a48ba" alt="GKD2RMTL Architecture" width="1280" height="720"/>
