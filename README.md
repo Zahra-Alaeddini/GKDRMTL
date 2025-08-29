@@ -20,12 +20,12 @@ The **teacher model** is a deep, expressive architecture built with:
 
 It is employed to predict:
 - 🧪 **drug-disease associations**  
-- 🧬 **drug-gene binding interactions**  
+- 🧬 **disease similarity**  
 - 💊 **drug similarity**  
 - 🧫 **disease-gene associations**
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9006f4c5-16f7-4b68-93d4-a885426a48ba" alt="GKD2RMTL Architecture" width="1280" height="720"/>
+  <img width="2726" height="1579" alt="GKDRMTL Architecture" src="https://github.com/user-attachments/assets/b7ec4b0e-956a-4e4f-bb7d-18b7df12c7a6" />
 </p>
 
 The **student model** is lightweight, employing a **single-layer GraphSAGE** with task-specific heads. It learns from the teacher via **knowledge distillation**, using **distillation loss** to transfer knowledge effectively.
@@ -42,7 +42,7 @@ The **student model** is lightweight, employing a **single-layer GraphSAGE** wit
 
 To address class imbalance in edge prediction tasks:
 - **Weighted binary cross-entropy loss** is applied
-- **Adaptive negative sampling** improves performance on sparse graphs
+- **Adaptive hard negative sampling** improves performance on sparse graphs
 
 ## 📝 License
 This project is licensed under the [MIT License](LICENSE).
